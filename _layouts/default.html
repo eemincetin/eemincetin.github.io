@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body class="dark">
+  <header class="site-header">
+    <h1 class="site-title"><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+  </header>
+  <div class="shell">
+    <main id="reader" role="main">
+      {{ content }}
+    </main>
+    <aside class="reading-list" aria-label="Know-how list">
+      <h2>know-how</h2>
+      <ul>
+        {%- for post in site.posts -%}
+        <li class="post-link {%- if page.url == post.url -%}active{%- endif -%}"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+        {%- endfor -%}
+      </ul>
+    </aside>
+  </div>
+</body>
+</html>

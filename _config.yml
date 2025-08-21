@@ -1,0 +1,23 @@
+title: "in fpga we trust"
+email: eeminceetin@gmail.com
+description: >-
+  Personal site.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://eemincetin.github.io" # the base hostname & protocol
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Time & publishing
+timezone: Europe/Istanbul
+future: true
+
+# Permalinks
+permalink: /:categories/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
